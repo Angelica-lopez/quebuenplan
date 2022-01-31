@@ -1,0 +1,287 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.content-logo {
+  position: relative;
+  width: 30%;
+  left: 0;
+  top: 0;
+  background: #000;
+  z-index: 1;
+  border-radius: 0 100px 100px 0;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.header {
+  background: #fff;
+  -webkit-box-shadow: 1px -1px 20px 0px #333;
+          box-shadow: 1px -1px 20px 0px #333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  gap: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.header__logo {
+  width: 120px;
+  height: 120px;
+}
+
+.header__nav {
+  min-width: 300px;
+  padding-right: 120px;
+}
+
+.header__nav-item {
+  margin-right: 80px;
+  color: #000;
+  font-size: 23px;
+  text-shadow: 0.1em 0.1em 0.2em black;
+}
+
+.header__nav-item:hover {
+  cursor: pointer;
+}
+
+.header__nav-item--margin {
+  margin-right: 0;
+}
+
+.anchor {
+  text-decoration: none;
+}
+
+.hero {
+  width: 80%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 130px 0;
+}
+
+.hero__title {
+  font-size: 50px;
+  font-weight: bold;
+  margin: 0;
+  text-shadow: 10px 10px 5px gray;
+}
+
+.hero__descripcion {
+  font-size: 20px;
+}
+
+.container__menu {
+  padding-top: 100px;
+  margin-top: 100px;
+}
+
+.container__menu-title {
+  font-size: 30px;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+  background-color: #000;
+  border-radius: 150px;
+  color: #fff;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-bottom: 5px;
+  font-weight: lighter;
+}
+
+.container__menu .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  margin: auto;
+  width: 80%;
+  padding: 100px 0;
+}
+
+.container__menu .menu__item {
+  border-radius: 15px;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__menu .menu__item--aeropuertos {
+  background-image: url("assets/aeropuertos.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--boliches {
+  background-image: url("assets/boliches.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--centrosc {
+  background-image: url("assets/centros-comerciales.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--estadios {
+  background-image: url("assets/estadios.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--hoteles {
+  background-image: url("assets/hoteles.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--iglesias {
+  background-image: url("assets/iglesias.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--instituciones {
+  background-image: url("assets/instituciones.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--mercados {
+  background-image: url("assets/mercados.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumentos {
+  background-image: url("assets/monumentos.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--museos {
+  background-image: url("assets/museos.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--parques {
+  background-image: url("assets/parques.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item--restaurantes {
+  background-image: url("assets/restaurantes.JPEG");
+  background-size: cover;
+}
+
+.container__menu .menu__item-title {
+  float: inline-start;
+  color: #fff;
+  font-weight: lighter;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+}
+
+.container__menu .menu__item-title:hover {
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.size {
+  font-size: 30px;
+}
+
+.ceo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #fff;
+  width: 100%;
+  padding: 40px 0;
+  background-color: #000;
+}
+
+.ceo__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.ceo__content2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.ceo__flag {
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.ceo__title {
+  font-size: 50px;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+  margin: 0;
+}
+
+.ceo__name {
+  font-weight: lighter;
+  font-size: 20px;
+}
+
+.ceo__photo {
+  width: 300px;
+  height: 300px;
+  border-radius: 53%;
+  margin-right: 40px;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.5);
+}
+/*# sourceMappingURL=home.css.map */
