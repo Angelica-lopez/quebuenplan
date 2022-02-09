@@ -3,50 +3,67 @@
     <head>
         <title>QBP</title>
         <meta charset="UTF-8"/>    
-        <meta name="keywords" content="bolivia turismo hoteles boliches " />
+        <meta name="keywords" content="bolivia turismo hoteles boliches" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="assets/logo.png">
         <link rel="StyleSheet" href="home.css">
     </head>
     <body>
         <header class="header">
-            <div class="content-logo">
-                <img class="header__logo" src="assets/logo.png" />
+            <div class="logo">
+                <img class="logo__img" src="assets/logo.png"/>
             </div>
             <nav class="header__nav">
-                <a class="anchor" href="#"><span class="header__nav-item">Inicio</span></a>
-                <a class="anchor" href="#"><span class="header__nav-item">Contacto</span></a>
-                <a class="anchor" href="#"><span class="header__nav-item header__nav-item--margin">Nosotros</span></a>
+                <a href="index.html" class="anchor">
+                    <div class="header__nav-item">Home</div>
+                </a>
+                <a href="#contactar" class="anchor">
+                    <div class="header__nav-item">Contactanos</div>
+                </a>
+                <a href="https://www.olx.com.co/" class="anchor">
+                    <div class="header__nav-item">Registrate</div>
+                </a>
             </nav>
+            <div class="hamburguesa">
+                <span class="hamburguesa__item"></span>
+                <span class="hamburguesa__item"></span>
+                <span class="hamburguesa__item"></span>
+            </div>
         </header>
-        <div class="hero">
-            <h1 class="hero__title">¿Quienes somos?</h1>
-            <p class="hero__descripcion">Empresa comprometida con el desarrollo sostenible, que respeta el patrimonio natural y cultural de cada país, promoviendo con clientes, proveedores y empleados prácticas responsables con el medio ambiente, comunidades locales y patrimonio cultural. Así mismo apoya el desarrollo económico de la región donde opera y de los destinos que comercializa.</p>
-        </div>
 
-
-        <section class="ceo">
-            <img class="ceo__photo" src="assets/christian4.jpeg" />
-            <div class="ceo__content">
-                <h1 class="ceo__title">Nuestro C.E.O</h1>
-                <div class="ceo__content2">
-                    <h2 class="ceo__name">Christian Monroy Herrera</h2>
-                    <img class="ceo__flag" src="assets/colombia.png" />
+    
+        <section class="hero">
+            <div class="container-desplegable">
+                <div class="desplegable">
+                    <a href="index.html" class="desplegable__item">Home</a>
+                    <a href="#" class="desplegable__item">Registrate</a>
+                    <a href="#contactar" class="desplegable__item">Contactanos</a>
                 </div>
             </div>
+            <h1 class="hero__title">"Buenos planes todo el tiempo"</h1>
+        </section>
+
+        <section class="video-Bolivia">
+            <h1 class="video-Bolivia__title">Esto es Bolivia</h1>
+            <h2 class="video-Bolivia__subtitle">(This is Bolivia)</h2>
+            <iframe class="video-Bolivia__video" src="https://www.youtube.com/embed/DnVOR09yp7o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </section>
 
         <div class="container__menu">
-            <h1 class="container__menu-title">¿Que buen plan SCZ?</h1>
+            <div class="container-titles">
+                <h1 class="container__menu-title">¿Que ciudad te gustaria visitar?<span class="container__menu-span">&#160;</span></h1>
+                <h1 class="container__menu-title2">¿En que ciudad te encuentras?<span class="container__menu-span2">&#160;</span></h1>
+            </div>
+            
             <div class="menu">
                 <div class="menu__item menu__item--aeropuertos">
-                    <h1 class="menu__item-title">Aeropuertos</title>
+                    <h1 class="menu__item-title">Santa Cruz</title>
                 </div>
                 <div class="menu__item menu__item--boliches">
-                    <h1 class="menu__item-title">Boliches</title>
+                    <h1 class="menu__item-title">La paz</title>
                 </div>
                 <div class="menu__item menu__item--centrosc">
-                    <h1 class="menu__item-title size">Centros comerciales</title>
+                    <h1 class="menu__item-title size">Cochabamba</title>
                 </div>
                 <div class="menu__item menu__item--estadios">
                     <h1 class="menu__item-title">Estadios</title>
@@ -77,5 +94,24 @@
                 </div>
             </div>
         </div>
+
+        <section id="contactar" class="redes">
+            <div class="contenedores">
+                <div class="contenedores__item">
+                    <img src="assets/whatsapp.png" class="contenedores__item-img" />
+                    <span class="contenedores__item-info">+591 75369203</span>
+                </div>
+                <div class="contenedores__item">
+                    <img src="assets/instagram.png" class="contenedores__item-img" />
+                    <span class="contenedores__item-info">@quebuenplanszc</span>
+                </div>
+                <div class="contenedores__item">
+                    <img src="assets/email.png" class="contenedores__item-img" />
+                    <span class="contenedores__item-info">quebuenplanszc@gmail.com</span>
+                </div>
+            </div>
+        </section>
+
+    <script src="home.js"></script>
     </body>
 </html>
