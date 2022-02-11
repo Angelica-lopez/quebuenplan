@@ -1,0 +1,578 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+b {
+  color: #090852;
+  text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
+.padre__container-desplegable {
+  position: relative;
+}
+
+.container__header {
+  z-index: 2;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #fff;
+  width: 100%;
+  -webkit-box-shadow: 3px 15px 15px -4px rgba(0, 0, 0, 0.42);
+          box-shadow: 3px 15px 15px -4px rgba(0, 0, 0, 0.42);
+}
+
+@media (max-width: 750px) {
+  .header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.header .logo {
+  width: 40%;
+  border-top-right-radius: 100px;
+  border-bottom-right-radius: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  background-color: #090852;
+}
+
+@media (max-width: 750px) {
+  .header .logo {
+    width: 60%;
+  }
+}
+
+.header .logo__img {
+  width: 120px;
+  height: 120px;
+}
+
+.header__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  width: 60%;
+  color: #fff;
+  padding: 40px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 750px) {
+  .header__nav {
+    display: none;
+  }
+}
+
+.header__nav-item {
+  background-color: #090852;
+  border-radius: 30px;
+  padding: 10px 0;
+  font-size: 14px;
+  min-width: 133.57px;
+  text-align: center;
+}
+
+.header__nav-item:hover {
+  cursor: pointer;
+}
+
+.hamburguesa {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+@media (max-width: 750px) {
+  .hamburguesa {
+    display: inline-block;
+    margin-right: 30px;
+  }
+}
+
+.hamburguesa__item {
+  display: block;
+  width: 50px;
+  height: 8px;
+  margin-bottom: 5px;
+  background-color: #090852;
+}
+
+.container-desplegable {
+  display: none;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.desplegable {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #090852;
+  display: inline-block;
+}
+
+.desplegable__item {
+  display: block;
+  text-align: center;
+  padding: 5px 50px;
+  border-bottom: solid 2px white;
+}
+
+.container-titles {
+  background-color: #090852;
+  border-radius: 150px;
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  overflow: hidden;
+  padding-bottom: 10px;
+}
+
+.container__menu {
+  padding-top: 100px;
+}
+
+@media (max-width: 750px) {
+  .container__menu {
+    padding-top: 50px;
+    margin-top: 50px;
+  }
+}
+
+.container__menu-title {
+  font-size: 30px;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+  color: #fff;
+  margin: 0;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 750px) {
+  .container__menu-title {
+    font-size: 20px;
+  }
+}
+
+.container__menu .menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (minmax(250px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  margin: auto;
+  width: 80%;
+  padding: 100px 0;
+}
+
+.container__menu .menu__item {
+  border-radius: 15px;
+  width: 100%;
+  height: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container__menu .menu__item--monumento1 {
+  background-image: url("assets/monumentos/monumento1.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento2 {
+  background-image: url("assets/monumentos/monumento2.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento3 {
+  background-image: url("assets/monumentos/monumento3.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento4 {
+  background-image: url("assets/monumentos/monumento4.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento5 {
+  background-image: url("assets/monumentos/monumento5.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento6 {
+  background-image: url("assets/monumentos/monumento6.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento7 {
+  background-image: url("assets/monumentos/monumento7.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento8 {
+  background-image: url("assets/monumentos/monumento8.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento9 {
+  background-image: url("assets/monumentos/monumento9.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento10 {
+  background-image: url("assets/monumentos/monumento10.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento11 {
+  background-image: url("assets/monumentos/monumento11.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento12 {
+  background-image: url("assets/monumentos/monumento12.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento13 {
+  background-image: url("assets/monumentos/monumento13.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento14 {
+  background-image: url("assets/monumentos/monumento14.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento15 {
+  background-image: url("assets/monumentos/monumento15.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento16 {
+  background-image: url("assets/monumentos/monumento16.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento17 {
+  background-image: url("assets/monumentos/monumento17.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento18 {
+  background-image: url("assets/monumentos/monumento18.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento19 {
+  background-image: url("assets/monumentos/monumento19.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento20 {
+  background-image: url("assets/monumentos/monumento20.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento21 {
+  background-image: url("assets/monumentos/monumento21.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento22 {
+  background-image: url("assets/monumentos/monumento22.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento23 {
+  background-image: url("assets/monumentos/monumento23.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento24 {
+  background-image: url("assets/monumentos/monumento24.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento25 {
+  background-image: url("assets/monumentos/monumento25.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento26 {
+  background-image: url("assets/monumentos/monumento26.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento27 {
+  background-image: url("assets/monumentos/monumento27.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento28 {
+  background-image: url("assets/monumentos/monumento28.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento29 {
+  background-image: url("assets/monumentos/monumento29.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento30 {
+  background-image: url("assets/monumentos/monumento30.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento31 {
+  background-image: url("assets/monumentos/monumento31.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento32 {
+  background-image: url("assets/monumentos/monumento32.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento33 {
+  background-image: url("assets/monumentos/monumento33.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento34 {
+  background-image: url("assets/monumentos/monumento34.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento35 {
+  background-image: url("assets/monumentos/monumento35.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento36 {
+  background-image: url("assets/monumentos/monumento36.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento37 {
+  background-image: url("assets/monumentos/monumento37.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento38 {
+  background-image: url("assets/monumentos/monumento38.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento39 {
+  background-image: url("assets/monumentos/monumento39.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento40 {
+  background-image: url("assets/monumentos/monumento40.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento41 {
+  background-image: url("assets/monumentos/monumento41.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento42 {
+  background-image: url("assets/monumentos/monumento42.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento43 {
+  background-image: url("assets/monumentos/monumento43.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento44 {
+  background-image: url("assets/monumentos/monumento44.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento45 {
+  background-image: url("assets/monumentos/monumento45.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento46 {
+  background-image: url("assets/monumentos/monumento46.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento47 {
+  background-image: url("assets/monumentos/monumento47.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento48 {
+  background-image: url("assets/monumentos/monumento48.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento49 {
+  background-image: url("assets/monumentos/monumento49.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento50 {
+  background-image: url("assets/monumentos/monumento50.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item--monumento51 {
+  background-image: url("assets/monumentos/monumento51.jpg");
+  background-size: cover;
+}
+
+.container__menu .menu__item-title {
+  float: inline-start;
+  color: #fff;
+  font-weight: lighter;
+  text-shadow: 0.1em 0.1em 0.2em #fff;
+}
+
+.container__menu .menu__item-title:hover {
+  font-size: 38px;
+  cursor: pointer;
+}
+
+.redes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
+  padding: 50px 60px;
+  background-color: #090852;
+}
+
+@media (max-width: 750px) {
+  .redes {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 30px 20px 50px 20px;
+  }
+}
+
+.contenedores {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+@media (max-width: 750px) {
+  .contenedores {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
+.contenedores__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 750px) {
+  .contenedores__item {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 10px 0;
+  }
+}
+
+.contenedores__item-img {
+  width: 50px;
+  height: 50px;
+  padding-right: 10px;
+}
+
+.contenedores__item-info {
+  color: #fff;
+  font-size: 20px;
+  font-weight: lighter;
+}
+/*# sourceMappingURL=monumentos.css.map */

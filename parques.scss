@@ -1,0 +1,393 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+b {
+    color: rgb(9, 8, 82);
+    text-shadow: 1px 0px 1px #CCCCCC, 0px 1px 1px #EEEEEE, 2px 1px 1px #CCCCCC, 1px 2px 1px #EEEEEE, 3px 2px 1px #CCCCCC, 2px 3px 1px #EEEEEE, 4px 3px 1px #CCCCCC, 3px 4px 1px #EEEEEE, 5px 4px 1px #CCCCCC, 4px 5px 1px #EEEEEE, 6px 5px 1px #CCCCCC, 5px 6px 1px #EEEEEE, 7px 6px 1px #CCCCCC;
+}
+
+.padre__container-desplegable {
+    position: relative;
+}
+.container__header {
+    z-index: 2;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+    
+.header {
+    display: flex;
+    background-color: #fff;
+    width: 100%;
+    box-shadow: 3px 15px 15px -4px rgba(0,0,0,0.42);
+    
+
+    @media (max-width: 750px) {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .logo {
+        width: 40%;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        display: flex;
+        justify-content: end;
+        background-color: rgb(9, 8, 82);
+
+        @media (max-width: 750px) {
+            width: 60%;
+        }
+
+        &__img {
+            width: 120px;
+            height: 120px;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        width: 60%;
+        color: #fff;
+        padding: 40px 0;
+        align-items: center;
+
+        @media (max-width: 750px) {
+            display: none;
+        }
+        
+        &-item {
+            background-color: rgb(9, 8, 82);
+            border-radius: 30px;
+            padding: 10px 0;
+            font-size: 14px;
+            min-width: 133.57px;
+            text-align: center;
+
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.hamburguesa {
+    display: none;
+    flex-direction: column;
+
+    @media (max-width: 750px) {
+        display: inline-block;
+        margin-right: 30px;
+    }
+
+    &__item {
+        display: block;
+        width: 50px;
+        height: 8px;
+        margin-bottom: 5px;
+        background-color: rgb(9, 8, 82);
+    }
+
+}
+
+.container-desplegable {
+    display: none;
+    justify-content: end;
+}
+
+.desplegable {
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    background-color: rgb(9, 8, 82);
+    display: inline-block;
+
+    &__item {
+        display: block;
+        text-align: center;
+        padding: 5px 50px;
+        border-bottom: solid 2px white;
+    }
+}
+
+.container-titles {
+    background-color: rgb(9, 8, 82);
+    border-radius: 150px;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    padding-bottom: 10px;
+}
+
+
+.container__menu {
+    padding-top: 100px;
+
+    @media (max-width: 750px) {
+        padding-top: 50px;
+        margin-top: 50px;
+    }
+
+    &-title {
+        font-size: 30px;
+        text-shadow: 0.1em 0.1em 0.2em #fff;
+        color: #fff;
+        margin: 0;
+        position: relative;
+        z-index: 1;
+
+        @media (max-width: 750px) {
+            font-size: 20px;
+        }
+    }
+
+    
+    .menu {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        grid-column-gap: 100px;
+        grid-row-gap: 50px;
+        margin: auto;
+        width: 80%;
+        padding: 100px 0;
+        &__item {
+            border-radius: 15px;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &--parque1 {
+                background-image: url('assets/parques/parque1.jpg');
+                background-size: cover;
+            }
+            &--parque2 {
+                background-image: url('assets/parques/parque2.jpg');
+                background-size: cover;
+            }
+            &--parque3 {
+                background-image: url('assets/parques/parque3.jpg');
+                background-size: cover;
+            }
+            &--parque4 {
+                background-image: url('assets/parques/parque4.jpg');
+                background-size: cover;
+            }
+            &--parque5 {
+                background-image: url('assets/parques/parque5.jpg');
+                background-size: cover;
+            }
+            &--parque6 {
+                background-image: url('assets/parques/parque6.jpg');
+                background-size: cover;
+            }
+            &--parque7 {
+                background-image: url('assets/parques/parque7.jpg');
+                background-size: cover;
+            }
+            &--parque8 {
+                background-image: url('assets/parques/parque8.jpg');
+                background-size: cover;
+            }
+            &--parque9 {
+                background-image: url('assets/parques/parque9.jpg');
+                background-size: cover;
+            }
+            &--parque10 {
+                background-image: url('assets/parques/parque10.jpg');
+                background-size: cover;
+            }
+            &--parque11 {
+                background-image: url('assets/parques/parque11.jpg');
+                background-size: cover;
+            }
+            &--parque12 {
+                background-image: url('assets/parques/parque12.jpg');
+                background-size: cover;
+            }
+            &--parque13 {
+                background-image: url('assets/parques/parque13.jpg');
+                background-size: cover;
+            }
+            &--parque14 {
+                background-image: url('assets/parques/parque14.jpg');
+                background-size: cover;
+            }
+            &--parque15 {
+                background-image: url('assets/parques/parque15.jpg');
+                background-size: cover;
+            }
+            &--parque16 {
+                background-image: url('assets/parques/parque16.jpg');
+                background-size: cover;
+            }
+            &--parque17 {
+                background-image: url('assets/parques/parque17.jpg');
+                background-size: cover;
+            }
+            &--parque18 {
+                background-image: url('assets/parques/parque18.jpg');
+                background-size: cover;
+            }
+            &--parque19 {
+                background-image: url('assets/parques/parque19.jpg');
+                background-size: cover;
+            }
+            &--parque20 {
+                background-image: url('assets/parques/parque20.jpg');
+                background-size: cover;
+            }
+            &--parque21 {
+                background-image: url('assets/parques/parque21.jpg');
+                background-size: cover;
+            }
+            &--parque22 {
+                background-image: url('assets/parques/parque22.jpg');
+                background-size: cover;
+            }
+            &--parque23 {
+                background-image: url('assets/parques/parque23.jpg');
+                background-size: cover;
+            }
+            &--parque24 {
+                background-image: url('assets/parques/parque24.jpg');
+                background-size: cover;
+            }
+            &--parque25 {
+                background-image: url('assets/parques/parque25.jpg');
+                background-size: cover;
+            }
+            &--parque26 {
+                background-image: url('assets/parques/parque26.jpg');
+                background-size: cover;
+            }
+            &--parque27 {
+                background-image: url('assets/parques/parque27.jpg');
+                background-size: cover;
+            }
+            &--parque28 {
+                background-image: url('assets/parques/parque28.jpg');
+                background-size: cover;
+            }
+            &--parque29 {
+                background-image: url('assets/parques/parque29.jpg');
+                background-size: cover;
+            }
+            &--parque30 {
+                background-image: url('assets/parques/parque30.jpg');
+                background-size: cover;
+            }
+            &--parque31 {
+                background-image: url('assets/parques/parque31.jpg');
+                background-size: cover;
+            }
+            &--parque32 {
+                background-image: url('assets/parques/parque32.jpg');
+                background-size: cover;
+            }
+            &--parque33 {
+                background-image: url('assets/parques/parque33.jpg');
+                background-size: cover;
+            }
+            &--parque34 {
+                background-image: url('assets/parques/parque34.jpg');
+                background-size: cover;
+            }
+            &--parque35 {
+                background-image: url('assets/parques/parque35.jpg');
+                background-size: cover;
+            }
+            &--parque36 {
+                background-image: url('assets/parques/parque36.jpg');
+                background-size: cover;
+            }
+            &--parque37 {
+                background-image: url('assets/parques/parque37.jpg');
+                background-size: cover;
+            }
+            &--parque38 {
+                background-image: url('assets/parques/parque38.jpg');
+                background-size: cover;
+            }
+            &-title {
+                float: inline-start;
+                color: #fff;
+                font-weight: lighter;
+                text-shadow: 0.1em 0.1em 0.2em #fff;
+                &:hover {
+                    font-size: 38px;
+                    cursor: pointer;
+                }
+            }
+        }
+    
+    }
+}
+
+
+.redes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 60px;
+    background-color: rgb(9, 8, 82);
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+        padding: 30px 20px 50px 20px;
+    }
+
+}
+
+.contenedores {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (max-width: 750px) {
+        flex-direction: column;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        flex-direction: row;
+        align-items: center;
+
+        @media (max-width: 750px) {
+            justify-content: space-between;
+            padding: 10px 0;
+        }
+
+        &-img {
+            width: 50px;
+            height: 50px;
+            padding-right: 10px;
+        }
+
+        &-info {
+            color: #fff;
+            font-size: 20px;
+            font-weight: lighter;
+        }
+    }
+}
